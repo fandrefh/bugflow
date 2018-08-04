@@ -42,6 +42,7 @@ THIRD_APPS = []
 
 PROJECT_APPS = [
     'bugflow.home.apps.HomeConfig',
+    'bugflow.accounts.apps.AccountsConfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_APPS + PROJECT_APPS
