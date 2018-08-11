@@ -6,6 +6,7 @@ url = "https://pypi.org/simple"
 [packages]
 django = "*"
 "psycopg2-binary" = "*"
+django-widget-tweaks = "*"
 
 [dev-packages]
 
