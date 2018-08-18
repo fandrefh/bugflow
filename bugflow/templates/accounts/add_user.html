@@ -27,22 +27,67 @@
                 <label for="">Nome</label>
                 {{ form.first_name }}
             </div>
+            
+            {% if form.first_name.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.first_name.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}                
+                
             <div class="form-group">
                 <label for="">Sobrenome</label>
                 {{ form.last_name|add_class:'form-control' }}
             </div>
+
+            {% if form.last_name.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.last_name.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}
+
             <div class="form-group">
                 <label for="">E-mail</label>
                 {{ form.email|add_class:'form-control' }}
             </div>
+
+            {% if form.email.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.email.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}
+
             <div class="form-group">
                 <label for="">Usuário</label>
                 {{ form.username|add_class:'form-control' }}
             </div>
+
+            {% if form.username.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.username.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}
+
             <div class="form-group">
                 <label for="">Senha</label>
                 {{ form.password|add_class:'form-control' }}
             </div>
+
+            {% if form.password.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.password.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}
+
             <div class="form-group">
                 <button type='submit' class="btn btn-primary">Criar</button>
             </div>

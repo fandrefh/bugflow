@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    {{ block.super }} - Minha conta
+{% endblock title %}
+
+
+{% block body %}
+    <div class="container">
+        <h1>Minha Conta</h1>
+        
+        {% if messages %}
+            <div class="alert alert-success" role='alert'>
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <p>Nome: {{ user.first_name }}</p>
+        <p>Sobrenome: {{ user.last_name }}</p>
+        <p>Usuário: {{ user.username }}</p>
+        <p>E-mail: {{ user.email }}</p>
+    </div>
+{% endblock body %}
+    
+    
