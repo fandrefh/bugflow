@@ -22,6 +22,8 @@
         <p>Sobrenome: {{ user.last_name }}</p>
         <p>Usuário: {{ user.username }}</p>
         <p>E-mail: {{ user.email }}</p>
+        <a href="{% url 'accounts:edit-user' %}" class="btn btn-primary btn-xs">Editar perfil</a>
+        <a href="" class="btn btn-primary btn-xs">Trocar senha</a>
     </div>
 {% endblock body %}
     

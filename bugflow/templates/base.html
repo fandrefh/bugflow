@@ -49,7 +49,9 @@
           
           {% if user.is_authenticated %}
             <div class="navbar-form navbar-right">
-              <span class="btn bg-primary">{{ user.get_full_name|default:user.username }}</span>
+              <a href="{% url 'accounts:user-profile' %}" class="btn bg-primary">
+                {{ user.get_full_name|default:user.username }}
+              </a>
               <a href="{% url 'accounts:user-logout' %}" class="btn btn-warning">Sair</a>
             </div>
           {% else %}

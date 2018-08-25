@@ -17,3 +17,12 @@ class UserForm(forms.ModelForm):
             'first_name',
             'last_name'
         )
+
+class EditUserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = [
+            'first_name',
+            'last_name',
+            'email'
+        ]
