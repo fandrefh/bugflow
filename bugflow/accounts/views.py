@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 
@@ -35,6 +35,10 @@ def user_login(request):
         print('Deu caca!!!!')
         messages.error(request, 'Login não realizado.')
     return render(request, 'home/index.html')
+
+def user_logout(request):
+    logout(request)
+    return redirect('/')
 
 
 def user_profile(request):

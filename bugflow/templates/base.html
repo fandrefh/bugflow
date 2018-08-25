@@ -46,17 +46,26 @@
           <a class="navbar-brand" href="/">Bugflow</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" method="POST" action="{% url 'accounts:user-login' %}">
-            {% csrf_token %}
-            <div class="form-group">
-              <input type="text" name="username" placeholder="Digite seu usuário" class="form-control">
+          
+          {% if user.is_authenticated %}
+            <div class="navbar-form navbar-right">
+              <span class="btn bg-primary">{{ user.get_full_name|default:user.username }}</span>
+              <a href="{% url 'accounts:user-logout' %}" class="btn btn-warning">Sair</a>
             </div>
-            <div class="form-group">
-              <input type="password" name="password" placeholder="Digite sua senha" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Entrar</button>
-            <a href="{% url 'accounts:add-user' %}" class="btn btn-primary">Criar conta</a>
-          </form>
+          {% else %}
+            <form class="navbar-form navbar-right" method="POST" action="{% url 'accounts:user-login' %}">
+              {% csrf_token %}
+              <div class="form-group">
+                <input type="text" name="username" placeholder="Digite seu usuário" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="password" name="password" placeholder="Digite sua senha" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-success">Entrar</button>
+              <a href="{% url 'accounts:add-user' %}" class="btn btn-primary">Criar conta</a>
+            </form>
+          {% endif %}
+            
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
