@@ -48,9 +48,12 @@ def user_login(request):
         messages.success(request, 'Login feito com sucesso.')
         return redirect('accounts:user-profile')
     else:
-        print('Deu caca!!!!')
-        messages.error(request, 'Login não realizado.')
+        messages.error(request, 'Login não realizado. Usuário ou senha inválido.')
+        return redirect('accounts:error-login')
     return render(request, 'home/index.html')
+
+def error_login(request):
+    return render(request, 'accounts/user_login.html', {})
 
 def user_logout(request):
     logout(request)
