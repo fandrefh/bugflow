@@ -1,0 +1,124 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+0001_initial.py	../projects/migrations/0001_initial.py	1;"	kind:file	line:1
+0002_auto_20180908_1135.py	../projects/migrations/0002_auto_20180908_1135.py	1;"	kind:file	line:1
+ALLOWED_HOSTS	../settings.py	/^ALLOWED_HOSTS = []$/;"	kind:variable	line:27
+AUTH_PASSWORD_VALIDATORS	../settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:102
+AccountsConfig	../accounts/apps.py	/^class AccountsConfig(AppConfig):$/;"	kind:class	line:4
+BASE_DIR	../settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
+DATABASES	../settings.py	/^DATABASES = {$/;"	kind:variable	line:87
+DEBUG	../settings.py	/^DEBUG = True$/;"	kind:variable	line:25
+DJANGO_APPS	../settings.py	/^DJANGO_APPS = [$/;"	kind:variable	line:32
+EditUserForm	../accounts/forms.py	/^class EditUserForm(forms.ModelForm):$/;"	kind:class	line:21
+HomeConfig	../home/apps.py	/^class HomeConfig(AppConfig):$/;"	kind:class	line:4
+INSTALLED_APPS	../settings.py	/^INSTALLED_APPS = DJANGO_APPS + THIRD_APPS + PROJECT_APPS$/;"	kind:variable	line:51
+LANGUAGE_CODE	../settings.py	/^LANGUAGE_CODE = 'pt-br'$/;"	kind:variable	line:121
+MEDIA_ROOT	../settings.py	/^MEDIA_ROOT = os.path.join(BASE_DIR, 'bugflow', 'media')$/;"	kind:variable	line:139
+MEDIA_URL	../settings.py	/^MEDIA_URL = '\/media\/'$/;"	kind:variable	line:142
+MIDDLEWARE	../settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:53
+Meta	../accounts/forms.py	/^    class Meta:$/;"	kind:class	line:11
+Meta	../accounts/forms.py	/^    class Meta:$/;"	kind:class	line:22
+Meta	../projects/forms.py	/^    class Meta:$/;"	kind:class	line:6
+Meta	../projects/models.py	/^    class Meta:$/;"	kind:class	line:17
+Migration	../projects/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:7
+Migration	../projects/migrations/0002_auto_20180908_1135.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:6
+PROJECT_APPS	../settings.py	/^PROJECT_APPS = [$/;"	kind:variable	line:45
+Project	../projects/models.py	/^class Project(models.Model):$/;"	kind:class	line:6
+ProjectForm	../projects/forms.py	/^class ProjectForm(forms.ModelForm):$/;"	kind:class	line:5
+ProjectsConfig	../projects/apps.py	/^class ProjectsConfig(AppConfig):$/;"	kind:class	line:4
+ROOT_URLCONF	../settings.py	/^ROOT_URLCONF = 'bugflow.urls'$/;"	kind:variable	line:63
+STATICFILES_DIRS	../settings.py	/^STATICFILES_DIRS = [$/;"	kind:variable	line:135
+STATIC_URL	../settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:141
+TEMPLATES	../settings.py	/^TEMPLATES = [$/;"	kind:variable	line:65
+THIRD_APPS	../settings.py	/^THIRD_APPS = [$/;"	kind:variable	line:41
+TIME_ZONE	../settings.py	/^TIME_ZONE = 'America\/Fortaleza'$/;"	kind:variable	line:123
+USE_I18N	../settings.py	/^USE_I18N = True$/;"	kind:variable	line:125
+USE_L10N	../settings.py	/^USE_L10N = True$/;"	kind:variable	line:127
+USE_TZ	../settings.py	/^USE_TZ = True$/;"	kind:variable	line:129
+UserForm	../accounts/forms.py	/^class UserForm(forms.ModelForm):$/;"	kind:class	line:4
+WSGI_APPLICATION	../settings.py	/^WSGI_APPLICATION = 'bugflow.wsgi.application'$/;"	kind:variable	line:81
+__init__.py	../__init__.py	1;"	kind:file	line:1
+__init__.py	../accounts/__init__.py	1;"	kind:file	line:1
+__init__.py	../accounts/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../home/__init__.py	1;"	kind:file	line:1
+__init__.py	../home/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../projects/__init__.py	1;"	kind:file	line:1
+__init__.py	../projects/migrations/__init__.py	1;"	kind:file	line:1
+__str__	../projects/models.py	/^    def __str__(self):$/;"	kind:member	line:22
+add_project	../projects/views.py	/^def add_project(request):$/;"	kind:function	line:8
+add_user	../accounts/views.py	/^def add_user(request):$/;"	kind:function	line:15
+admin.py	../accounts/admin.py	1;"	kind:file	line:1
+admin.py	../home/admin.py	1;"	kind:file	line:1
+admin.py	../projects/admin.py	1;"	kind:file	line:1
+app_name	../accounts/urls.py	/^app_name = 'accounts'$/;"	kind:variable	line:5
+app_name	../projects/urls.py	/^app_name = 'projects'$/;"	kind:variable	line:3
+application	../wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
+apps.py	../accounts/apps.py	1;"	kind:file	line:1
+apps.py	../home/apps.py	1;"	kind:file	line:1
+apps.py	../projects/apps.py	1;"	kind:file	line:1
+attachment	../projects/models.py	/^    attachment = models.FileField(u'Anexo', upload_to='attachments', null=True, blank=True)$/;"	kind:variable	line:13
+change_password	../accounts/views.py	/^def change_password(request):$/;"	kind:function	line:67
+created_at	../projects/models.py	/^    created_at = models.DateTimeField(auto_now_add=True)$/;"	kind:variable	line:14
+dependencies	../projects/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:11
+dependencies	../projects/migrations/0002_auto_20180908_1135.py	/^    dependencies = [$/;"	kind:variable	line:8
+edit_user	../accounts/views.py	/^def edit_user(request):$/;"	kind:function	line:31
+error_login	../accounts/views.py	/^def error_login(request):$/;"	kind:function	line:55
+field	../projects/migrations/0002_auto_20180908_1135.py	/^            field=models.FileField(blank=True, null=True, upload_to='attachments', verbose_name='Anexo'),$/;"	kind:variable	line:16
+fields	../accounts/forms.py	/^        fields = ($/;"	kind:variable	line:13
+fields	../accounts/forms.py	/^        fields = [$/;"	kind:variable	line:24
+fields	../projects/forms.py	/^        fields = '__all__'/;"	kind:variable	line:8
+fields	../projects/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:18
+finished_at	../projects/models.py	/^    finished_at = models.DateField(u'Data de fim')$/;"	kind:variable	line:9
+first_name	../accounts/forms.py	/^    first_name = forms.CharField($/;"	kind:variable	line:5
+forms.py	../accounts/forms.py	1;"	kind:file	line:1
+forms.py	../projects/forms.py	1;"	kind:file	line:1
+home_page	../home/views.py	/^def home_page(request):$/;"	kind:function	line:5
+initial	../projects/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:9
+model	../accounts/forms.py	/^        model = User$/;"	kind:variable	line:12
+model	../accounts/forms.py	/^        model = User$/;"	kind:variable	line:23
+model	../projects/forms.py	/^        model = Project$/;"	kind:variable	line:7
+model_name	../projects/migrations/0002_auto_20180908_1135.py	/^            model_name='project',$/;"	kind:variable	line:14
+models.py	../accounts/models.py	1;"	kind:file	line:1
+models.py	../home/models.py	1;"	kind:file	line:1
+models.py	../projects/models.py	1;"	kind:file	line:1
+name	../accounts/apps.py	/^    name = 'bugflow.accounts'$/;"	kind:variable	line:5
+name	../home/apps.py	/^    name = 'bugflow.home'$/;"	kind:variable	line:5
+name	../projects/apps.py	/^    name = 'bugflow.projects'$/;"	kind:variable	line:5
+name	../projects/migrations/0001_initial.py	/^            name='Project',$/;"	kind:variable	line:17
+name	../projects/migrations/0002_auto_20180908_1135.py	/^            name='attachment',$/;"	kind:variable	line:15
+name	../projects/models.py	/^    name = models.CharField(u'Nome', max_length=150)$/;"	kind:variable	line:7
+objective	../projects/models.py	/^    objective = models.CharField(u'Objetivo', max_length=250)$/;"	kind:variable	line:10
+obs	../projects/models.py	/^    obs = models.TextField(u'Observação', null=True, blank=True)$/;"	kind:variable	line:15
+operations	../projects/migrations/0001_initial.py	/^    operations = [$/;"	kind:variable	line:15
+operations	../projects/migrations/0002_auto_20180908_1135.py	/^    operations = [$/;"	kind:variable	line:12
+options	../projects/migrations/0001_initial.py	/^            options={$/;"	kind:variable	line:30
+ordering	../projects/models.py	/^        ordering = ['id']$/;"	kind:variable	line:18
+password	../accounts/forms.py	/^    password = forms.CharField($/;"	kind:variable	line:8
+settings.py	../settings.py	1;"	kind:file	line:1
+specification	../projects/models.py	/^    specification = models.TextField(u'Espeficificação')$/;"	kind:variable	line:11
+started_at	../projects/models.py	/^    started_at = models.DateField(u'Data de início')$/;"	kind:variable	line:8
+tests.py	../accounts/tests.py	1;"	kind:file	line:1
+tests.py	../home/tests.py	1;"	kind:file	line:1
+tests.py	../projects/tests.py	1;"	kind:file	line:1
+urlpatterns	../accounts/urls.py	/^urlpatterns = [$/;"	kind:variable	line:7
+urlpatterns	../projects/urls.py	/^urlpatterns = [$/;"	kind:variable	line:7
+urlpatterns	../urls.py	/^urlpatterns = [$/;"	kind:variable	line:27
+urls.py	../accounts/urls.py	1;"	kind:file	line:1
+urls.py	../projects/urls.py	1;"	kind:file	line:1
+urls.py	../urls.py	1;"	kind:file	line:1
+user_login	../accounts/views.py	/^def user_login(request):$/;"	kind:function	line:42
+user_logout	../accounts/views.py	/^def user_logout(request):$/;"	kind:function	line:58
+user_profile	../accounts/views.py	/^def user_profile(request):$/;"	kind:function	line:62
+users	../projects/models.py	/^    users = models.ManyToManyField(User, verbose_name='Usuários')$/;"	kind:variable	line:12
+verbose_name	../projects/models.py	/^        verbose_name = 'Projeto'$/;"	kind:variable	line:19
+verbose_name_plural	../projects/models.py	/^        verbose_name_plural = 'Projetos'$/;"	kind:variable	line:20
+views.py	../accounts/views.py	1;"	kind:file	line:1
+views.py	../home/views.py	1;"	kind:file	line:1
+views.py	../projects/views.py	1;"	kind:file	line:1
+widget	../accounts/forms.py	/^        widget=forms.TextInput(attrs={'class': 'form-control'})$/;"	kind:variable	line:6
+widget	../accounts/forms.py	/^        widget=forms.TextInput(attrs={'type': 'password'})$/;"	kind:variable	line:9
+wsgi.py	../wsgi.py	1;"	kind:file	line:1

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    {{ block.super }} - Projetos
+{% endblock title %}
+
+
+{% block body %}
+<div class="container">
+    <h1>Confirma exclusão</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="alert alert-warning" role="alert">
+            <h3>Você tem certeza que deseja excluir o projeto {{ project }}?</h3>
+        </div>
+        <a href="{% url 'projects:projects_list' %}" class="btn btn-default">Cancelar</a>
+        <button type="submit" class="btn btn-danger">Confirma</button>
+    </form>
+</div>
+{% endblock body %}

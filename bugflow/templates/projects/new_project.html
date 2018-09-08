@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+
+{% block title %}
+    {{ block.super }} - Criar novo projeto
+{% endblock title %}
+
+
+{% block body %}
+    <div class="container">
+        <h1>Criar projeto</h1>
+        
+        {% if messages %}
+            <div class="alert alert-success" role="alert">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+                
+        {% endif %}
+            
+        <form method='post'>
+        {% csrf_token %}
+            <div class="form-group">
+                <label for="{{ form.name.id_for_label }}">{{ form.name.label }}</label>
+                {{ form.name|add_class:"form-control" }}
+            </div>
+            
+            {% if form.name.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.name.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}                
+                
+            <div class="form-group">
+                <label for="{{ form.started_at.id_for_label }}">{{ form.started_at.label }}</label>
+                {% render_field form.started_at type="date" class="form-control" %}
+            </div>
+
+            {% if form.started_at.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.started_at.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="form-group">
+                <label for="{{ form.finished_at.id_for_label }}">{{ form.finished_at.label }}</label>
+                {% render_field form.finished_at type="date" class="form-control" %}
+            </div>
+
+            {% if form.finished_at.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.finished_at.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="form-group">
+                <label for="{{ form.objective.id_for_label }}">{{ form.objective.label }}</label>
+                {{ form.objective|add_class:'form-control' }}
+            </div>
+
+            {% if form.objective.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.objective.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="form-group">
+                <label for="{{ form.specification.id_for_label }}">{{ form.specification.label }}</label>
+                {{ form.specification|add_class:'form-control' }}
+            </div>
+
+            {% if form.specification.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.specification.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}
+            
+            <div class="form-group">
+                <label for="{{ form.users.id_for_label }}">{{ form.users.label }}</label>
+                {{ form.users|add_class:'form-control' }}
+            </div>
+
+            {% if form.users.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.users.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}
+            
+            <div class="form-group">
+                <label for="{{ form.attachment.id_for_label }}">{{ form.attachment.label }}</label>
+                {{ form.attachment|add_class:'form-control' }}
+            </div>
+
+            {% if form.attachment.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.attachment.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}
+            
+            <div class="form-group">
+                <label for="{{ form.obs.id_for_label }}">{{ form.obs.label }}</label>
+                {{ form.obs|add_class:'form-control' }}
+            </div>
+
+            {% if form.obs.errors %}
+                <div class="form-group">
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.obs.errors.as_text }}
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="form-group">
+                <button type='submit' class="btn btn-primary">Criar</button>
+                <a href="{% url 'projects:projects_list' %}" class="btn btn-default">Cancelar</a>
+            </div>
+        </form>
+    </div>
+{% endblock body %}
+    

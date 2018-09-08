@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ block.super }} - Projetos
+{% endblock title %}
+
+
+{% block body %}
+<div class="container">
+    <h1>Lista de projetos</h1>
+    
+    {% if messages %}
+        <div class="alert alert-success" role="alert">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Projeto</th>
+                <th>Objetivo</th>
+                <th>Data Início</th>
+                <th>Data Fim</th>
+                <th colspan="2">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in projects %}
+                <tr>
+                    <td>{{ p.name }}</td>
+                    <td>{{ p.objective }}</td>
+                    <td>{{ p.started_at }}</td>
+                    <td>{{ p.finished_at }}</td>
+                    <td><a href="" class="btn btn-primary btn-xs">Editar</a></td>
+                    <td><a href="{% url 'projects:delete_project' p.pk %}" class="btn btn-danger btn-xs">Excluir</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>Número de projetos: {{ number_projects }}</p>
+    <a href="{% url 'projects:new_project' %}" class="btn btn-primary">Adicionar novo</a>
+</div>
+{% endblock body %}
