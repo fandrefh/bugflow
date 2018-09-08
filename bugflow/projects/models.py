@@ -10,7 +10,7 @@ class Project(models.Model):
     objective = models.CharField(u'Objetivo', max_length=250)
     specification = models.TextField(u'Espeficificação')
     users = models.ManyToManyField(User, verbose_name='Usuários')
-    attachment = models.FileField(u'Anexo', upload_to='attachments')
+    attachment = models.FileField(u'Anexo', upload_to='attachments', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     obs = models.TextField(u'Observação', null=True, blank=True)
 

@@ -22,10 +22,12 @@ from django.conf.urls.static import static
 from bugflow.home import views
 
 from bugflow.accounts import urls as accounts_urls
+from bugflow.projects import urls as projects_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include(accounts_urls, namespace='accounts')),
+    path('projects/', include(projects_urls, namespace='projects')),
     path('', views.home_page, name='home_page'),
 ]
 
