@@ -35,7 +35,7 @@
                     <td>{{ p.objective }}</td>
                     <td>{{ p.started_at }}</td>
                     <td>{{ p.finished_at }}</td>
-                    <td><a href="" class="btn btn-primary btn-xs">Editar</a></td>
+                    <td><a href="{% url 'projects:update_project' p.pk %}" class="btn btn-primary btn-xs">Editar</a></td>
                     <td><a href="{% url 'projects:delete_project' p.pk %}" class="btn btn-danger btn-xs">Excluir</a></td>
                 </tr>
             {% endfor %}

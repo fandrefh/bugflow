@@ -4,13 +4,19 @@
 
 
 {% block title %}
-    {{ block.super }} - Criar novo projeto
+    {{ block.super }} - Projeto
 {% endblock title %}
 
 
 {% block body %}
     <div class="container">
-        <h1>Criar projeto</h1>
+        
+        {% if form.instance.id %}
+            <h1>Atualizar Projeto</h1>
+        {% else %}
+            <h1>Criar Projeto</h1>
+        {% endif %}
+            
         
         {% if messages %}
             <div class="alert alert-success" role="alert">
@@ -21,7 +27,7 @@
                 
         {% endif %}
             
-        <form method='post'>
+        <form method='post' autocomplete="off">
         {% csrf_token %}
             <div class="form-group">
                 <label for="{{ form.name.id_for_label }}">{{ form.name.label }}</label>
@@ -38,7 +44,7 @@
                 
             <div class="form-group">
                 <label for="{{ form.started_at.id_for_label }}">{{ form.started_at.label }}</label>
-                {% render_field form.started_at type="date" class="form-control" %}
+                {% render_field form.started_at class="form-control" %}
             </div>
 
             {% if form.started_at.errors %}
@@ -51,7 +57,7 @@
 
             <div class="form-group">
                 <label for="{{ form.finished_at.id_for_label }}">{{ form.finished_at.label }}</label>
-                {% render_field form.finished_at type="date" class="form-control" %}
+                {% render_field form.finished_at class="form-control" %}
             </div>
 
             {% if form.finished_at.errors %}
@@ -128,7 +134,13 @@
             {% endif %}
 
             <div class="form-group">
-                <button type='submit' class="btn btn-primary">Criar</button>
+                
+                {% if form.instance.id %}
+                    <button type='submit' class="btn btn-primary">Salvar</button>
+                {% else %}
+                    <button type='submit' class="btn btn-primary">Criar</button>
+                {% endif %}
+                    
                 <a href="{% url 'projects:projects_list' %}" class="btn btn-default">Cancelar</a>
             </div>
         </form>

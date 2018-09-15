@@ -24,6 +24,9 @@
     <!-- User login screen -->
     <link href="{% static "css/signin.css" %}" rel="stylesheet">
 
+    <!-- jQuery UI Calendar -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="{% static "js/ie-emulation-modes-warning.js" %}"></script>
@@ -54,6 +57,9 @@
             <div class="navbar-form navbar-right">
               <a href="{% url 'accounts:user-profile' %}" class="btn bg-primary">
                 {{ user.get_full_name|default:user.username }}
+              </a>
+              <a href="{% url 'projects:projects_list' %}" class="btn bg-info">
+                Projetos
               </a>
               <a href="{% url 'accounts:user-logout' %}" class="btn btn-warning">Sair</a>
             </div>
@@ -98,5 +104,8 @@
     <script src="{% static "js/bootstrap.min.js" %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{% static "js/ie10-viewport-bug-workaround.js" %}"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{% static "js/jquery-calendar.js" %}"></script>
   </body>
 </html>

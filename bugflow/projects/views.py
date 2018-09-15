@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
@@ -48,4 +48,27 @@ def confirm_and_delete_project(request, pk):
         'project': project,
     }
     
+    return render(request, template_name, context)
+
+@login_required
+def update_project(request, pk):
+    template_name = 'projects/new_project.html'
+    try:
+        project = get_object_or_404(Project, pk=pk)
+    except Project.DoesNotExist:
+        raise Http404()
+
+    if request.method == 'POST':
+        form = ProjectForm(request.POST, instance=project)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Projeto editado com sucesso.')
+            return redirect('projects:projects_list')
+    
+    form = ProjectForm(instance=project)
+    
+    context = {
+        'form': form,
+    }
+
     return render(request, template_name, context)
