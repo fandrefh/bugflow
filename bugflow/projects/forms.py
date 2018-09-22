@@ -5,4 +5,9 @@ from .models import Project
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fields = '__all__'
+        exclude = ['user', 'status']
+
+class ProjectUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        exclude = ['user']

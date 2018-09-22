@@ -25,6 +25,7 @@
                 <th>Objetivo</th>
                 <th>Data Início</th>
                 <th>Data Fim</th>
+                <th>Status</th>
                 <th colspan="2">Ações</th>
             </tr>
         </thead>
@@ -35,6 +36,7 @@
                     <td>{{ p.objective }}</td>
                     <td>{{ p.started_at }}</td>
                     <td>{{ p.finished_at }}</td>
+                    <td>{{ p.get_status_display }}</td>
                     <td><a href="{% url 'projects:update_project' p.pk %}" class="btn btn-primary btn-xs">Editar</a></td>
                     <td><a href="{% url 'projects:delete_project' p.pk %}" class="btn btn-danger btn-xs">Excluir</a></td>
                 </tr>
