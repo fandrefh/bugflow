@@ -24,7 +24,7 @@ SECRET_KEY = 'b5uxo__f!etmx=ks)_+bs1555apu40v%xz79zg^1j(!&5)s$p^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,6 +40,7 @@ DJANGO_APPS = [
 
 THIRD_APPS = [
     'widget_tweaks',
+    'rest_framework',
 ]
 
 PROJECT_APPS = [
@@ -136,7 +137,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'bugflow', 'staticfiles'),
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'bugflow', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'

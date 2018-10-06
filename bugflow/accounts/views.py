@@ -40,17 +40,21 @@ def edit_user(request):
     return render(request, 'accounts/edit_user.html', {'form': form})
 
 def user_login(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-        login(request, user)
-        messages.success(request, 'Login feito com sucesso.')
-        return redirect('accounts:user-profile')
-    else:
-        messages.error(request, 'Login não realizado. Usuário ou senha inválido.')
-        return redirect('accounts:error-login')
-    return render(request, 'home/index.html')
+    next_url = request.GET.get('next')
+    if request.POST:
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            messages.success(request, 'Login feito com sucesso.')
+            print('Próxima URL:', next_url)
+            return redirect(request.GET.get(next_url, 'accounts:user-profile'))
+        else:
+            messages.error(request, 'Login não realizado. Usuário ou senha inválido.')
+            return redirect('accounts:error-login')
+    
+    return render(request, 'accounts/user_login.html')
 
 def error_login(request):
     return render(request, 'accounts/user_login.html', {})

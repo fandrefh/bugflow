@@ -28,6 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include(accounts_urls, namespace='accounts')),
     path('projects/', include(projects_urls, namespace='projects')),
+    path('api/v1/', include(projects_urls, namespace='projects_apis')),
     path('', views.home_page, name='home_page'),
 ]
 

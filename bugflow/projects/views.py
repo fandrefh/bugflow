@@ -4,8 +4,12 @@ from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.contrib.auth.models import User
 
+from rest_framework import generics
+
 from .forms import ProjectForm, ProjectUpdateForm
 from .models import Project
+
+from .serializers import ProjectSerializer
 
 # Create your views here.
 
@@ -85,3 +89,13 @@ def update_project(request, pk):
     }
 
     return render(request, template_name, context)
+
+
+class ProjectCreateView(generics.ListCreateAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+
+
+class ProjectRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
